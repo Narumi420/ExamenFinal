@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de eventos</title>
+</head>
+<body>
+    <h1>Reporte de eventos</h1>
+    <p>Fecha: [[${fecha}]]</p>
+    <h3>Listado de eventos</h3>
+    <table border="1" cellpadding = "5" width="100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Fin</th>
+                <th>Costo</th>
+            </tr>
+        </thead> 
+     
+    
+        <tbody>
+            <tr th:each="reg: ${registros}">
+                <td th:text="${reg.id}"></td>
+                <td th:text="${reg.nombre}"></td>
+                <td th:text="${reg.descripcion}"></td>
+                <td th:text="${reg.Fecha_Inicio}"></td>
+                <td th:text="${reg.Fecha_Fin}"></td>
+                <td th:text="${reg.Costo}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
